@@ -2341,6 +2341,10 @@ struct UIDebug {
   drawTimeMillis @0 :Float32;
 }
 
+struct UiSetSpeed {
+  buttonSignal @0 :Int16;
+}
+
 struct ManagerState {
   processes @0 :List(ProcessState);
 
@@ -2572,6 +2576,8 @@ struct Event {
     # UI services
     userFlag @93 :UserFlag;
     uiDebug @102 :UIDebug;
+    uiSetSpeed @147 :UiSetSpeed;
+
 
     # *********** debug ***********
     testJoystick @52 :Joystick;
