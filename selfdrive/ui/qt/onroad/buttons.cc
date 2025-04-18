@@ -84,7 +84,7 @@ void ExperimentalButton::drawButton(QPainter &p) {
     decreaseButton->setStyleSheet(buttonStyleSheet);
     layout->addWidget(decreaseButton);
 
-    increaseButton = new QPushButton("  ", this);
+    increaseButton = new QPushButton("+", this);
     increaseButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
     increaseButton->setFont(buttonFont);
     increaseButton->setPalette(buttonPalette);
