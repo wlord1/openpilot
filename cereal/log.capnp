@@ -137,6 +137,13 @@ enum LongitudinalPersonality {
   relaxed @2;
 }
 
+enum TrafficSignOffset {
+  off @0;
+  five @1;
+  ten @2;
+  fifteen @3;
+}
+
 struct InitData {
   kernelArgs @0 :List(Text);
   kernelVersion @15 :Text;
@@ -826,6 +833,7 @@ struct SelfdriveState {
   # configurable driving settings
   experimentalMode @10 :Bool;
   personality @11 :LongitudinalPersonality;
+  trafficSignOffset @13 :TrafficSignOffset;
 
   enum OpenpilotState @0xdbe58b96d2d1ac61 {
     disabled @0;
