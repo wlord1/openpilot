@@ -53,8 +53,8 @@ T_IDXS_LST = [index_function(idx, max_val=MAX_T, max_idx=N) for idx in range(N+1
 T_IDXS = np.array(T_IDXS_LST)
 FCW_IDXS = T_IDXS < 5.0
 T_DIFFS = np.diff(T_IDXS, prepend=[0.])
-COMFORT_BRAKE = 2.5
-STOP_DISTANCE = 6.0
+COMFORT_BRAKE = 3.0
+STOP_DISTANCE = 2.0
 CRUISE_MIN_ACCEL = -1.2
 CRUISE_MAX_ACCEL = 1.6
 
@@ -75,7 +75,7 @@ def get_T_FOLLOW(personality=log.LongitudinalPersonality.standard):
   elif personality==log.LongitudinalPersonality.standard:
     return 1.45
   elif personality==log.LongitudinalPersonality.aggressive:
-    return 1.00
+    return 0.90
   else:
     raise NotImplementedError("Longitudinal personality not supported")
 
